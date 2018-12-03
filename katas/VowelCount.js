@@ -4,9 +4,15 @@
 
 
 function getCount(str) {
+  str = str.toLowerCase()
   var vowelsCount = 0;
-  
-  // enter your majic here
+  var vowels = ['a', 'e', 'i', 'o','u'];
+  for (vowel in vowels) {
+  	while (str.includes(vowels[vowel])){
+  		vowelsCount++;
+  		str = str.replace(vowels[vowel],"");
+  	};
+  };
   
   return vowelsCount;
 }
